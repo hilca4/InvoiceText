@@ -1,0 +1,4 @@
+CFG nanoInvoice
+instant_keys on
+com Schreinerbetrieb Hilbert
+cit Frankfurt am Main
