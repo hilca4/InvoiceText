@@ -157,3 +157,52 @@ MIT License
 ---
 
 *"InvoiceText - The charm of text, the precision of numbers."*
+
+
+## 🧾 Abkürzungsverzeichnis / Abbreviations
+
+---
+
+### 🇩🇪 Deutsch
+
+| Abkürzung | Bedeutung | Beschreibung |
+|------------|------------|---------------|
+| adr | **Adressdatei** (`adr.txt`) | Enthält Kundendaten, z. B. Name, Anschrift, Ansprechpartner |
+| cfg | **Konfigurationsdatei** (`cfg.txt`) | Enthält Firmendaten, Dokumenttitel, Fußtexte, E-Mail usw. |
+| doc | **Dokumenttyp** | Kennzeichnet die Art des Dokuments: Rechnung, Angebot, Lieferschein … |
+| html | **HyperText Markup Language** | Standard-Dateiformat für erzeugte Ausgabedokumente |
+| id | **Kennung (Identifier)** | Eindeutiger Schlüssel für Kunden, Aufträge oder Mitarbeiter |
+| inv | **Rechnung** | Abkürzung für erzeugte Rechnungsdokumente |
+| ord | **Auftragsdatei** (`ord.txt`) | Enthält Positionen, Mengen, Preise und Beschreibungen |
+| out | **Ausgabeverzeichnis** (`out/`) | Ordner für alle generierten HTML-Dokumente |
+| pat | **Personal Access Token** | Zugriffstoken zur Authentifizierung bei GitHub |
+| repo | **Repository** | Git-Projektordner mit allen Quelldateien |
+| stk | **Stück (Unit)** | Mengeneinheit für Positionen, z. B. 1 Stk = 1 Teil |
+| tpl | **Vorlage (Template)** (`tpl.html`) | HTML-Vorlage mit Platzhaltern für die Dokumentausgabe |
+| txt | **Textdatei** | Reines Textformat für Konfiguration, Aufträge und Adressen |
+| url | **Uniform Resource Locator** | Webadresse, z. B. Link zum GitHub-Repository |
+| vat | **Mehrwertsteuer (Value Added Tax)** | Umsatzsteuerbetrag in Prozent oder Euro |
+
+---
+
+### 🇬🇧 English
+
+| Abbrev. | Meaning | Description |
+|----------|----------|-------------|
+| adr | **Address file** (`adr.txt`) | Contains client data such as name, address, contact person |
+| cfg | **Configuration file** (`cfg.txt`) | Contains company data, document titles, footers, email info, etc. |
+| doc | **Document type** | Indicates the document category: invoice, offer, delivery note, etc. |
+| html | **HyperText Markup Language** | Standard file format for generated output documents |
+| id | **Identifier** | Unique key for customers, orders or employees |
+| inv | **Invoice** | Short form for generated invoice documents |
+| ord | **Order file** (`ord.txt`) | Contains line items, quantities, prices and descriptions |
+| out | **Output folder** (`out/`) | Directory for all generated HTML documents |
+| pat | **Personal Access Token** | Access token used for GitHub authentication |
+| repo | **Repository** | Git project folder containing all source files |
+| stk | **Piece (Unit)** | Quantity unit for order positions, e.g. 1 stk = 1 item |
+| tpl | **Template** (`tpl.html`) | HTML layout template containing placeholders |
+| txt | **Text file** | Plain text format for configuration, orders and addresses |
+| url | **Uniform Resource Locator** | Web address, e.g. link to the GitHub repository |
+| vat | **Value Added Tax** | Sales tax value in percent or currency |
+
+---

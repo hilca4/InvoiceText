@@ -1,4 +1,26 @@
-CFG nanoInvoice
-instant_keys on
-com Schreinerbetrieb Hilbert
-cit Frankfurt am Main
+# ==============================
+# Firmendaten (feste Kürzel)
+# ==============================
+co = Hiiirt Holzdesign
+st = Teststraße 12
+pl = 77777 
+ci = Teststadt
+ib = DE12 3456 7890 0000 1234 56
+tx = 123/456/78901
+ml = info@abcdholz.de
+
+# ==============================
+# Dokumenttitel
+# ==============================
+di = Rechnung
+de = Kostenvoranschlag
+dc = Auftragsbestätigung
+dd = Lieferschein
+
+# ==============================
+# Footer-Texte pro Dokumenttyp
+# ==============================
+fi = Bitte überweisen Sie den Betrag nach Erhalt dieser Rechnung. {{ib}}
+fe = Bitte erteilen Sie den Auftrag per E-Mail.
+fc = Ihr Auftrag wird bearbeitet. Bitte prüfen Sie die Positionen.
+fd = Lieferung erfolgt wie besprochen.

@@ -1,6 +1,7 @@
 1
 meierg_gmbh_max
 Arbeitsplatte Küche
+I 2025-11-09
 2 Stk 120.00 Platte 62x60cm
 d 2025-11-15
 e 2025-11-08
@@ -10,3 +11,4 @@ schulz_paul
 Regalbau Wohnzimmer
 1 Stk 250.00 Regal 80x30x200
 i 2025-11-08
+

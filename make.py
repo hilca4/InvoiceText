@@ -109,7 +109,7 @@ def invoice_exists_in_invtxt(order_id, cust_key, title_short, gross_val, inv_lin
 # 5. Hauptlogik
 # =========================================================
 cfg = read_cfg_flat(root / "cfg.txt")
-tpl = (root / "inv.html").read_text(encoding="utf-8")
+tpl = (root / "tpl.html").read_text(encoding="utf-8")
 txt_ord = (root / "ord.txt").read_text().strip()
 blocks = split_orders(txt_ord)
 inv_lines = inv_file.read_text().splitlines()

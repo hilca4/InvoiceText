@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<title>{{doc}} {{id}}</title>
+<style>
+  @page { size: A4; margin: 14mm; }
+  html,body {
+    margin:0; padding:0;
+    font-family:"Courier New",Courier,monospace;
+    font-size:14px; line-height:1.4;
+    background:#eee;
+  }
+  body {
+    display:flex; justify-content:center; padding:10px;
+  }
+  .page {
+    width:210mm; min-height:297mm;
+    background:#fff; box-shadow:0 0 6px rgba(0,0,0,.3);
+    padding:12mm 14mm; box-sizing:border-box;
+    display:flex; flex-direction:column;
+  }
+
+  /* ===== Logo / Absenderblock ===== */
+  pre.logo {
+    margin:0; font-weight:bold; font-size:28px; line-height:1.1;
+    white-space:pre; color:#000; margin-bottom:2mm;
+  }
+  .sender {
+    font-size:10px; color:#444; text-align:right;
+    white-space:pre-line; margin-bottom:6mm;
+  }
+
+  /* ===== Adresse & Meta ===== */
+  .head {
+    display:flex; justify-content:space-between; align-items:flex-start;
+    margin-bottom:8mm;
+    margin-top: 20mm;
+  }
+  .address-block {
+    border-left:2px solid #888; padding-left:4mm;
+    min-width:65mm; max-width:85mm;
+  }
+  .invoice-meta { text-align:right; }
+  .invoice-meta .id { font-weight:bold; font-size:13px; }
+
+  /* ===== Positionstabelle ===== */
+  table { width:100%; border-collapse:collapse; margin-top:4mm; }
+  thead th { border-bottom:2px solid #000; padding:2px 4px; }
+  tbody td { border-bottom:1px dashed #aaa; padding:2px 4px; vertical-align:top; }
+  colgroup col:nth-child(1){width:8ch;}
+  colgroup col:nth-child(2){width:6ch;}
+  colgroup col:nth-child(4),colgroup col:nth-child(5){width:12ch;}
+  .num{text-align:right;white-space:pre;}
+
+  /* ===== Summen ===== */
+  .totals{margin-top:6mm;margin-left:auto;width:60mm;}
+  .totals td{padding:2px 4px;}
+  .totals .total{border-top:1px solid #000;font-weight:bold;}
+
+  /* ===== Beschreibung / Footer ===== */
+  .desc{margin:4mm 0;white-space:pre-line;}
+  .payment{margin-top:8mm;white-space:pre-line;}
+
+  @media print{body{background:none;padding:0}.page{box-shadow:none}}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Logo / Firmenname -->
+  <pre class="logo">{{co}}</pre>
+
+  <!-- Absender (feste Basis-Keys aus cfg.txt) -->
+  <div>
+    {{st}} , {{pl}} {{ci}}, {{ml}}<br>
+    IBAN {{ib}}, StNr {{tx}}
+  </div>
+
+  <!-- Kopfbereich mit Empfänger und Rechnungsdaten -->
+  <div class="head">
+    <div class="address-block">
+{{adr_full}}
+    </div>
+  </div>
+    <div class="invoice-meta">
+      <div class="id">{{doc}} {{id}}</div>
+      <div>{{d_doc}}</div>
+    </div>
+
+  <!-- Beschreibung / Referenz -->
+  <div class="desc">
+{{ord}}
+Ihr Zeichen: {{ref}}
+Lieferdatum: {{d}}
+  </div>
+
+  <!-- Positionstabelle -->
+  <table>
+    <colgroup><col/><col/><col/><col/><col/></colgroup>
+    <thead>
+      <tr>
+        <th>Anz.</th><th>Einh.</th><th>Gegenstand</th>
+        <th class="num">E-Preis</th><th class="num">G-Preis</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#its}}
+      <tr>
+        <td class="num">{{quantity}}</td>
+        <td>{{unit}}</td>
+        <td>{{description}}</td>
+        <td class="num">{{unit_price_eur}}</td>
+        <td class="num">{{line_net_eur}}</td>
+      </tr>
+      {{/its}}
+    </tbody>
+  </table>
+
+  <!-- Summenblock -->
+  <div class="totals">
+    <table>
+      <tr><td>Netto</td><td class="num">{{totals.net_eur}}</td></tr>
+      <tr><td>19 % USt</td><td class="num">{{totals.tax_eur}}</td></tr>
+      <tr class="total"><td>Gesamt €</td><td class="num">{{totals.gross_eur}}</td></tr>
+    </table>
+  </div>
+
+  <!-- Footer / Dokumenttext -->
+  <div class="payment">
+{{f}}
+  </div>
+
+</div>
+</body>
+</html>
